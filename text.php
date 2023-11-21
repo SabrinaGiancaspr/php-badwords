@@ -27,17 +27,20 @@ $testobonus = $_GET['textarea'];
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>testo</title>
 </head>
 <body>
+  <!-- Qui verrà visualizzato il contenuto della variabile $testobonus -->
   <p> <?php echo $testobonus ?></p>
+  <!-- Mostra il numero di caratteri nel testo -->
   <p> Numeri caratteri testo: <?php echo strlen($testobonus); ?></p>
+  <!-- Sostituisce la parola specificata in $censura con '***' -->
   <p> <?php echo str_replace($censura, '***', $testobonus ); ?> </p>
+  <!-- Mostra il numero di caratteri nel testo censurato -->
   <p>Numeri caratteri testo censurato: <?php echo strlen(str_replace($censura, '***', $testobonus )); ?></p>
-  
 </body>
 </html>
